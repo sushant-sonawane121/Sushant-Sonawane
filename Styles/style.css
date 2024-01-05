@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  /* overflow-x: hidden; */
+  font-family: "Open Sans", sans-serif;
+
+}
+
+/* for scrollbar  */
+::-webkit-scrollbar {
+    width: 7px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #fefefe; 
+    border-radius: 2px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: #000000; 
+  }
+
+  /* ///////////////////////////////////// */
+:root {
+  --background-color: #2b2b2b;
+  --color: white;
+  --universal-padding: 10px 10rem;
+
+}
+
+/* for title underlines */
+.titles{
+    position: relative;
+    width: fit-content;
+    padding-bottom: 0.2rem;
+}
+.titles::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: green;
+    
+}
+
+header {
+  /* border: 1px solid black; */
+  box-shadow: 0px 0.5px 10px 0px black;
+  background-color: var(--background-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 10rem;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+header .bars {
+  font-size: large;
+  color: var(--color);
+  cursor: pointer;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav ul li {
+  list-style-type: none;
+  margin-left: 2.5rem;
+}
+nav ul li a {
+  text-decoration: none;
+  color: var(--color);
+  font-size: large;
+}
+
+/* section css starts */
+.first-section {
+  padding: var(--universal-padding);
+  background-color: var(--background-color);
+  color: var(--color);
+  border: 1px solid black;
+  height: 100vh;
+}
+.container {
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 85%;
+}
+.left {
+  flex: 40%;
+  /* border: 1px solid green; */
+  height: 70%;
+  background-image: url(../Assets/tree.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+.right {
+  flex: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  row-gap: 2rem;
+  /* border: 1px solid green; */
+}
+.right h1 {
+  font-size: 2.5rem;
+}
+.right-btns {
+  /* border: 1px solid red; */
+  width: 60%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.right-btns button {
+  padding: 0.5rem 1rem;
+  border: 1px solid black;
+  color: var(--color);
+  background-color: black;
+  cursor: pointer;
+  font-size: medium;
+}
+
+
+/* skills section css */
+#se2{
+    font-size: 2rem;
+}
+.skills{
+    border-top: 5px solid black;
+    /* border: 1px solid red; */
+    background-color: var(--background-color);
+    color: var(--color);
+    min-height: 80vh;
+    
+    
+    padding: var(--universal-padding);
+}
+.skills-wrapper,.skills-container{
+    margin-top: 2rem;
+    /* border: 1px solid red; */
+    height: 100%;
+    padding: 1rem 0;
+   
+
+}
+.skills-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 2rem;
+    flex-wrap: wrap;
+    row-gap: 2rem;
+}
+.card{
+    width: fit-content;
+    min-height: 15rem;
+    padding: 1rem 3.5rem;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 0px 0.5px 10px 0px black;
+
+}
+.card .card-container{
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 1rem;
+    /* align-items: center; */
+    
+
+}
+.card .card-container> div{
+    border: 1px solid black;
+    width: fit-content;
+    padding: 0.2rem 1rem;
+    border-radius: 5px;
+
+
+}
+
+
+
+  
+ 
+  
