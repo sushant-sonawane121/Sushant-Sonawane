@@ -363,13 +363,71 @@ ul {
   cursor: pointer;
 }
 
+
+
+/* Existing CSS styles... */
+
 /* Media query for responsiveness */
-@media screen and (max-width: 600px) {
-  .c-card {
-    flex-direction: column;
+@media screen and (max-width: 992px) {
+  header {
+    padding: 1rem 2rem;
   }
 
-  .c-info {
-    margin-top: 20px;
+  .universal-padding {
+    padding: 10px 2rem;
   }
+
+  .right-btns {
+    width: 80%;
+  }
+
+  .c-card {
+    width: 90%;
+  }
+
+  nav {
+    display: none; /* Hide the navbar by default on larger screens */
+  }
+
+  header .bars {
+    display: block; /* Display the bars icon on smaller screens */
+  }
+
+  nav.active {
+    display: block; /* Display the navbar when active (for mobile) */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 70%; /* Adjust the width as needed */
+    height: 100%;
+    background-color: var(--background-color);
+    z-index: 3;
+    overflow-y: auto;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul li {
+    margin: 1rem 0;
+  }
+
+  nav ul li a {
+    font-size: large;
+  }
+}
+/* Existing CSS styles... */
+
+/* Media query for responsiveness */
+@media screen and (max-width: 768px) {
+  
+  
+
+}
+
+/* Media query for responsiveness */
+@media screen and (max-width: 600px) {
+ 
 }
