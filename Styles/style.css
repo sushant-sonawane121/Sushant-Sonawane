@@ -30,6 +30,7 @@
   --font-size-large: 1.5rem;
   --font-size-medium: 1.5rem;
   --font-size-small: 1rem;
+  --universal-box-shadow:0px 0.5px 10px 0px rgb(255, 255, 255);
 }
 
 /* Common title styling */
@@ -51,7 +52,7 @@
 
 /* Header styling */
 header {
-  box-shadow: 0 0.5px 10px 0px black;
+  /* box-shadow: var(--universal-box-shadow); */
   background-color: var(--background-color);
   display: flex;
   justify-content: space-between;
@@ -242,7 +243,7 @@ nav ul li a {
   padding: 1rem 3.5rem;
   border: 1px solid black;
   border-radius: 5px;
-  box-shadow: 0px 0.5px 10px 0px black;
+  box-shadow: var(--universal-box-shadow);
 }
 
 .card .card-container {
@@ -294,7 +295,7 @@ nav ul li a {
   padding: 0.5rem 0.5rem;
   /* border: 1px solid red; */
   border-radius: 5px;
-  box-shadow: 0px 0.5px 10px 0px black;
+  box-shadow: var(--universal-box-shadow);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -367,7 +368,7 @@ nav ul li a {
 .c-card {
   background-color: rgb(0, 0, 0);
   border-radius: 5px;
-  box-shadow: 0px 0.5px 10px 0px rgb(255, 255, 255);
+  box-shadow: var(--universal-box-shadow);
   display: flex;
   padding: 20px;
   height: fit-content;
@@ -418,7 +419,7 @@ ul {
 .wa-form textarea {
   width: 100%;
   padding: 8px;
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
   margin-bottom: 10px;
   resize: vertical;
   outline: none;
