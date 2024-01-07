@@ -254,7 +254,7 @@ nav ul li a {
 
 .card .card-container > div {
   border: 1px solid black;
-  width: fit-content;
+  width: max-content;
   padding: 0.2rem 1rem;
   border-radius: 5px;
 }
@@ -282,27 +282,35 @@ nav ul li a {
   column-gap: 2rem;
   flex-wrap: wrap;
   row-gap: 2rem;
+  /* border: 1px solid red; */
+  
 }
 
 .pcard {
-  width: 15rem;
+  
+  width: 18rem;
   min-height: 20rem;
-  padding: 1rem 1rem;
-  border: 1px solid black;
+  padding: 0.5rem 0.5rem;
+  /* border: 1px solid red; */
   border-radius: 5px;
   box-shadow: 0px 0.5px 10px 0px black;
   display: flex;
   flex-direction: column;
+  align-items: center;
   position: relative;
 }
 
 .p-img {
+  /* border: 1px solid red; */
   width: 100%;
+  
+ 
 }
 
 .p-img img {
   width: 100%;
   height: 100%;
+  border-radius: 5px;
 }
 
 .pcard-data {
@@ -315,10 +323,6 @@ nav ul li a {
 
 .pacard-btns {
   width: 100%;
-  position: absolute;
-  bottom: 1rem;
-  left: 0;
-  right: 0;
   display: flex;
   justify-content: space-evenly;
 }
@@ -327,9 +331,10 @@ nav ul li a {
   border: none;
   background-color: black;
   color: white;
-  font-size: var(--font-size-medium);
-  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  padding: 0.1rem 0.5rem;
   cursor: pointer;
+  border-radius: 5px;
 }
 
 /* Contact section */
@@ -355,6 +360,7 @@ nav ul li a {
   column-gap: 2rem;
   flex-wrap: wrap;
   row-gap: 2rem;
+ 
 }
 
 .c-card {
@@ -363,16 +369,19 @@ nav ul li a {
   box-shadow: 0px 0.5px 10px 0px rgb(255, 255, 255);
   display: flex;
   padding: 20px;
-  height: 30vh;
+  height: fit-content;
   width: 40%;
   justify-content: center;
+  
 }
 
 .c-social {
+  
   margin-bottom: 20px;
+  padding: 1rem 0;
   display: flex;
   flex-direction: column;
-  height: 100%;
+ 
   justify-content: space-evenly;
   align-items: center;
   margin: 0 2rem 0 0;
@@ -398,6 +407,7 @@ ul {
 
 .wa-form label {
   display: block;
+  
   margin-bottom: 5px;
   font-size: var(--font-size-medium);
   margin: 1rem 0;
@@ -474,6 +484,29 @@ ul {
   nav ul li a {
     font-size: var(--font-size-large);
   }
+
+  .skills{
+    padding: 1rem 1rem;
+  }
+  
+  .card .card-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 0.5rem;
+    
+    
+  }
+  .projects {
+    padding: 1rem 1rem;
+  }
+  .contact {
+    padding: 1rem 1rem;
+  }
+  .wa-form label, .wa-form textarea, .wa-form button {
+    font-size: 1rem;
+  }
+
 }
 
 /* Existing CSS styles... */
@@ -481,9 +514,7 @@ ul {
   .first-section{
     padding: 1rem;
   }
-  .first-section .container{
-  
-  }
+ 
   .right h1 {
     font-size: 2rem;
   }
@@ -514,5 +545,9 @@ ul {
     font-size: 2rem;
   }
 }
-@media screen and (max-width: 280px) {
+@media screen and (max-width: 560px) {
+  .card{
+    width: 70%;
+  }
 }
+

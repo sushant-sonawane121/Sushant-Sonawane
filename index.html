@@ -22,7 +22,7 @@
             <li><a href="/">Home</a></li>
             <li><a href="#se2">Skills</a></li>
             <li><a href="#pse">Projects</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#cse">Contact</a></li>
           </ul>
         </nav>
         <i class="fa-solid fa-bars bars" id="bars"></i>
@@ -35,7 +35,7 @@
               <li><a href="/" id="home">Home</a></li>
               <li><a href="#se2">Skills</a></li>
               <li><a href="#pse">Projects</a></li>
-              <li><a href="#">Contact</a></li>
+              <li><a href="#cse">Contact</a></li>
             </ul>
           </div>
           <div class="side-header-social">
@@ -70,7 +70,7 @@
               <h3>A Passionate <span class="titles">Web Developer</span></h3>
             </div>
             <div class="right-btns">
-              <button>Contact</button>
+              <button onclick="document.getElementById('cse').scrollIntoView({ behavior: 'smooth' })">Contact</button>
               <button>Download CV</button>
             </div>
           </div>
@@ -140,10 +140,10 @@
                     Impedit, enim?
                   </p>
                 </div>
-              </div>
-              <div class="pacard-btns">
-                <button>GitHub</button>
-                <button>Live Demo</button>
+                <div class="pacard-btns">
+                  <button>GitHub</button>
+                  <button>Live Demo</button>
+                </div>
               </div>
             </div>
 
@@ -161,10 +161,10 @@
                     Impedit, enim?
                   </p>
                 </div>
-              </div>
-              <div class="pacard-btns">
-                <button>GitHub</button>
-                <button>Live Demo</button>
+                <div class="pacard-btns">
+                  <button>GitHub</button>
+                  <button>Live Demo</button>
+                </div>
               </div>
             </div>
           </div>
@@ -209,13 +209,7 @@
                     <label for="whatsapp-message" class="titles"
                       >WhatsApp Message:</label
                     >
-                    <!-- <input
-                      type="text"
-                      id="whatsapp-message"
-                      name="text"
-                      placeholder="Type your message"
-                      required
-                    /> -->
+              
                     <textarea
                       id="whatsapp-message"
                       name="text"
