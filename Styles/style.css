@@ -477,7 +477,30 @@ ul {
 }
 
 /* Existing CSS styles... */
-
+@media screen and (max-width: 992px) {
+  .first-section{
+    padding: 1rem;
+  }
+  .first-section .container{
+  
+  }
+  .right h1 {
+    font-size: 2rem;
+  }
+  .right-btns{
+    
+    
+    flex-direction: column;
+    row-gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .right-btns button{
+    width: 80%;
+    border-radius: 5px;
+  }
+  
+}
 /* Media query for responsiveness */
 @media screen and (max-width: 768px) {
   header .bars {
