@@ -30,7 +30,7 @@
   --font-size-large: 1.5rem;
   --font-size-medium: 1.5rem;
   --font-size-small: 1rem;
-  --universal-box-shadow:0px 0.5px 10px 0px rgb(255, 255, 255);
+  --universal-box-shadow: 0px 0.5px 10px 0px rgb(255, 255, 255);
 }
 
 /* Common title styling */
@@ -285,11 +285,9 @@ nav ul li a {
   flex-wrap: wrap;
   row-gap: 2rem;
   /* border: 1px solid red; */
-  
 }
 
 .pcard {
-  
   width: 18rem;
   min-height: 20rem;
   padding: 0.5rem 0.5rem;
@@ -305,8 +303,6 @@ nav ul li a {
 .p-img {
   /* border: 1px solid red; */
   width: 100%;
-  
- 
 }
 
 .p-img img {
@@ -362,7 +358,6 @@ nav ul li a {
   column-gap: 2rem;
   flex-wrap: wrap;
   row-gap: 2rem;
- 
 }
 
 .c-card {
@@ -374,16 +369,14 @@ nav ul li a {
   height: fit-content;
   width: 40%;
   justify-content: center;
-  
 }
 
 .c-social {
-  
   margin-bottom: 20px;
   padding: 1rem 0;
   display: flex;
   flex-direction: column;
- 
+
   justify-content: space-evenly;
   align-items: center;
   margin: 0 2rem 0 0;
@@ -410,7 +403,7 @@ ul {
 
 .wa-form label {
   display: block;
-  
+
   margin-bottom: 5px;
   font-size: var(--font-size-medium);
   margin: 1rem 0;
@@ -488,17 +481,15 @@ ul {
     font-size: var(--font-size-large);
   }
 
-  .skills{
+  .skills {
     padding: 1rem 1rem;
   }
-  
-  .card .card-container{
+
+  .card .card-container {
     width: 100%;
     display: flex;
     flex-direction: column;
     padding: 0 0.5rem;
-    
-    
   }
   .projects {
     padding: 1rem 1rem;
@@ -506,34 +497,32 @@ ul {
   .contact {
     padding: 1rem 1rem;
   }
-  .wa-form label, .wa-form textarea, .wa-form button {
+  .wa-form label,
+  .wa-form textarea,
+  .wa-form button {
     font-size: 1rem;
   }
-
 }
 
 /* Existing CSS styles... */
 @media screen and (max-width: 992px) {
-  .first-section{
+  .first-section {
     padding: 1rem;
   }
- 
+
   .right h1 {
     font-size: 2rem;
   }
-  .right-btns{
-    
-    
+  .right-btns {
     flex-direction: column;
     row-gap: 1rem;
     justify-content: space-between;
     align-items: center;
   }
-  .right-btns button{
+  .right-btns button {
     width: 80%;
     border-radius: 5px;
   }
-  
 }
 /* Media query for responsiveness */
 @media screen and (max-width: 768px) {
@@ -549,8 +538,7 @@ ul {
   }
 }
 @media screen and (max-width: 560px) {
-  .card{
+  .card {
     width: 70%;
   }
 }
-
