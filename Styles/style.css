@@ -390,6 +390,7 @@ nav ul li a {
 
 .c-social i {
   font-size: 2rem;
+  color: var(--color);
 }
 
 .c-info {
