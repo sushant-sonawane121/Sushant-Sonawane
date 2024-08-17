@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export default function Main() {
   return (
     <>
-      <section className="px-4 md:px-40 max-h-max min-h-screen pt-10 md:pt-20">
+      <section className="px-4 md:px-40 max-h-max min-h-screen pt-10 md:pt-20 bg-white dark:bg-slate-800 dark:text-white">
         <div className="flex flex-col md:flex-row md:justify-between items-center md:px-16">
           <div className="left flex flex-col justify-center space-y-8 py-2 md:space-y-14">
             <div className="text-3xl space-y-2">

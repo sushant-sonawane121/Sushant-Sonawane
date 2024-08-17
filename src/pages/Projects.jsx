@@ -2,7 +2,7 @@ import { FaExternalLinkAlt } from "react-icons/fa";
 export default function Projects() {
   return (
     <>
-      <section className="px-4 md:px-40 max-h-max min-h-screen pt-10 md:pt-20">
+      <section className="px-4 md:px-40 max-h-max min-h-screen py-10  md:pt-20 bg-white dark:bg-slate-800 dark:text-white">
         <div className="mb-10">
           <h2
             id="projects"

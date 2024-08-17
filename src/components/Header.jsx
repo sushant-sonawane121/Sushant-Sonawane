@@ -2,21 +2,29 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FaBars, FaSun, FaMoon } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
-// import logo from "../assets/logo.jpeg";
 import logo from "../assets/logo-bg-remoded.png";
+
 export default function Header() {
-  const [isDark, setIsDark] = useState(false);
+  // Set initial dark mode based on localStorage value
+  const [isDark, setIsDark] = useState(localStorage.getItem("dark") === "true");
   const [isNavMenuOpen, setIsNavMenuOpen] = useState(false);
   const [scrolly, setScrollY] = useState(false);
 
   const toggleNavMenu = () => setIsNavMenuOpen(!isNavMenuOpen);
+
+  useEffect(() => {
+    if (isDark) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+    // Update localStorage whenever isDark changes
+    localStorage.setItem("dark", isDark);
+  }, [isDark]);
+
   const toggleTheme = () => {
-    setIsDark(!isDark);
+    setIsDark((prev) => !prev);
   };
-  // function isdark() {
-  //     document.documentElement.classList.add('dark')
-  // }
-  // isdark();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -35,9 +43,10 @@ export default function Header() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
   return (
     <header
-      className={`border z-10 border-b-zinc-950 px-4 md:px-40 ${
+      className={`border z-10 border-b-zinc-950 px-4 md:px-40 bg-white dark:bg-slate-800 dark:text-white ${
         scrolly ? "sticky bg-gray-100" : ""
       } top-0 left-0 right-0`}
     >
@@ -90,24 +99,30 @@ export default function Header() {
 
       {/* Mobile Navigation Menu */}
       <nav
-        className={`fixed top-0 left-0 w-full bg-white border-b border-zinc-950 md:hidden transition-transform ${
+        className={`fixed top-0 left-0 w-full bg-white border-b border-zinc-950 md:hidden transition-transform bg-white dark:bg-slate-800 dark:text-white ${
           isNavMenuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
         <IoClose onClick={toggleNavMenu} className="text-2xl mt-4 ml-4" />
         <ul className="flex flex-col items-center py-4 space-y-4">
           <li>
-                <a href="/">Home</a>
-              </li>
-              <li>
-                <a href="#skills" onClick={toggleNavMenu}>Skills</a>
-              </li>
-              <li>
-                <a href="#projects" onClick={toggleNavMenu}>Projects</a>
-              </li>
-              <li>
-                <Link to="contact" onClick={toggleNavMenu}>Contact</Link>
-              </li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="#skills" onClick={toggleNavMenu}>
+              Skills
+            </a>
+          </li>
+          <li>
+            <a href="#projects" onClick={toggleNavMenu}>
+              Projects
+            </a>
+          </li>
+          <li>
+            <Link to="contact" onClick={toggleNavMenu}>
+              Contact
+            </Link>
+          </li>
         </ul>
       </nav>
     </header>

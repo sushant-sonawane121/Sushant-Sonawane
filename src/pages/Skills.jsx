@@ -1,7 +1,7 @@
 const Skills = () => {
   return (
     <>
-      <section className="px-4 md:px-40 max-h-max min-h-screen pt-10 md:pt-20">
+      <section className="px-4 md:px-40 max-h-max min-h-screen pt-10 md:pt-20 bg-white dark:bg-slate-800 dark:text-white">
         <div className="mb-10">
           <h2 id="skills" className="text-4xl font-bold relative pb-2 before:content-[''] before:h-[2px] before:w-full before:bg-green-500 before:absolute before:left-0 before:bottom-0">
             Skills

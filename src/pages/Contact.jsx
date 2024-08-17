@@ -16,7 +16,7 @@ const Contact = () => {
   };
 
   return (
-    <section className="px-4 md:px-40 max-h-max min-h-screen pt-10 md:pt-20">
+    <section className="bg-white dark:bg-slate-800 dark:text-white px-4 md:px-40 max-h-max min-h-screen pt-10 md:pt-20">
       <div className="text-center mb-10 flex flex-col justify-center items-center gap-4">
         <h2 className="text-4xl font-bold mb-4">Get in Touch</h2>
         <p className="text-lg text-gray-600">
