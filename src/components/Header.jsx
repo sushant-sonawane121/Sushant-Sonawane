@@ -89,7 +89,7 @@ export default function Header() {
                     </Link>
                   </li>
                   <li className="hover:bg-gray-400 rounded m-1 p-[2px]">
-                    <Link to="/textanalysis" onClick={handleTools}>
+                    <Link to="/agecalculator" onClick={handleTools}>
                       Age Calculater
                     </Link>
                   </li>
@@ -165,7 +165,7 @@ export default function Header() {
               </li>
               <li className="hover:bg-gray-400 rounded m-1 p-[2px]">
                 <Link
-                  to="/wordcounter"
+                  to="/agecalculator"
                   onClick={() => {
                     handleTools();
                     toggleNavMenu();

@@ -6,6 +6,7 @@ import Footer from "./components/Footer";
 import NotFound from "./pages/NotFound";
 import Contact from "./pages/Contact";
 import WrodCounter from "./pages/WrodCounter";
+import AgeCalculator from "./pages/AgeCalculator";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/contact" element={<Contact/>} />
         <Route path="/textanalysis" element={<WrodCounter/>} />
+        <Route path="/agecalculator" element={<AgeCalculator/>} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer/>
