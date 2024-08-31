@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { FaBars, FaSun, FaMoon } from "react-icons/fa";
+import { FaBars, FaSun, FaMoon, FaAngleDown } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
 import logo from "../assets/logo-bg-remoded.png";
 
@@ -9,6 +9,7 @@ export default function Header() {
   const [isDark, setIsDark] = useState(localStorage.getItem("dark") === "true");
   const [isNavMenuOpen, setIsNavMenuOpen] = useState(false);
   const [scrolly, setScrollY] = useState(false);
+  const [showTools, setShowTools] = useState(false);
 
   const toggleNavMenu = () => setIsNavMenuOpen(!isNavMenuOpen);
 
@@ -25,6 +26,9 @@ export default function Header() {
   const toggleTheme = () => {
     setIsDark((prev) => !prev);
   };
+  const handleTools = () => {
+    setShowTools(!showTools);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -37,16 +41,18 @@ export default function Header() {
 
     // Add scroll event listener
     window.addEventListener("scroll", handleScroll);
+    // window.addEventListener("click",toggleNavMenu);
 
     // Cleanup function to remove the event listener
     return () => {
       window.removeEventListener("scroll", handleScroll);
+      // window.removeEventListener("click",toggleNavMenu);
     };
   }, []);
 
   return (
     <header
-      className={`border z-10 border-b-zinc-950 px-4 md:px-40 bg-white dark:bg-slate-800 dark:text-white ${
+      className={` border border-slate-800 z-10 px-4 md:px-40 bg-white dark:bg-slate-800 dark:text-white ${
         scrolly ? "sticky bg-gray-100" : ""
       } top-0 left-0 right-0`}
     >
@@ -63,6 +69,31 @@ export default function Header() {
             <ul className="flex space-x-10 text-lg">
               <li>
                 <a href="/">Home</a>
+              </li>
+              <li className="relative">
+                <span
+                  className="flex gap-1 items-center cursor-pointer"
+                  onClick={handleTools}
+                >
+                  Tools <FaAngleDown />
+                </span>
+
+                <ul
+                  className={`bg-white text-black dark:bg-slate-800 dark:text-white border-2 rounded absolute min-w-max px-1 top-8
+                  ${showTools ? "block" : "hidden"}
+                  `}
+                >
+                  <li className="hover:bg-gray-400 rounded m-1 p-[2px]">
+                    <Link to="/textanalysis" onClick={handleTools}>
+                      Text Analysis
+                    </Link>
+                  </li>
+                  <li className="hover:bg-gray-400 rounded m-1 p-[2px]">
+                    <Link to="/textanalysis" onClick={handleTools}>
+                      Age Calculater
+                    </Link>
+                  </li>
+                </ul>
               </li>
               <li>
                 <a href="#skills">Skills</a>
@@ -107,6 +138,43 @@ export default function Header() {
         <ul className="flex flex-col items-center py-4 space-y-4">
           <li>
             <a href="/">Home</a>
+          </li>
+          <li className="relative">
+            <span
+              className="flex gap-1 items-center cursor-pointer"
+              onClick={handleTools}
+            >
+              Tools <FaAngleDown />
+            </span>
+
+            <ul
+              className={`bg-white text-black dark:bg-slate-800 dark:text-white absolute min-w-max px-1 top-8
+                  ${showTools ? "block" : "hidden"}
+                  `}
+            >
+              <li className="hover:bg-gray-400 rounded m-1 p-[2px]">
+                <Link
+                  to="/textanalysis"
+                  onClick={() => {
+                    handleTools();
+                    toggleNavMenu();
+                  }}
+                >
+                  Text Analysis
+                </Link>
+              </li>
+              <li className="hover:bg-gray-400 rounded m-1 p-[2px]">
+                <Link
+                  to="/wordcounter"
+                  onClick={() => {
+                    handleTools();
+                    toggleNavMenu();
+                  }}
+                >
+                  Age Calculater
+                </Link>
+              </li>
+            </ul>
           </li>
           <li>
             <a href="#skills" onClick={toggleNavMenu}>

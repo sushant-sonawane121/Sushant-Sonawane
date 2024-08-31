@@ -15,7 +15,7 @@ export default function Main() {
             <div className="flex flex-wrap gap-4">
               <a
                 target="_blank"
-                href="https://drive.google.com/file/d/1_iclyjT8JleCYuggZRnKpKLrIYDntzml/view?usp=sharing"
+                href="https://drive.google.com/file/d/1yYjk6qm8DrA_EQ-qbXSU4TN9JatFUZVb/view?usp=sharing"
                 className="flex items-center gap-2 border-2 border-green-500 px-4 py-2 rounded"
               >
                 Resume <FaExternalLinkAlt />
